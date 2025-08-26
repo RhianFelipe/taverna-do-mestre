@@ -12,6 +12,7 @@ $path = str_replace('/mestre/public', '', $path);
 $viewPath = match ($path) {
     '/', '/inicio' => 'pageHome.php',
     '/magias' => 'pageSpells.php',
+    '/links' => 'pageLinks.php',
     default => '404.php',
 };
 
