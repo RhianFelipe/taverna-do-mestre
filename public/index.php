@@ -9,8 +9,12 @@ $path = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 $path = str_replace('/mestre/public', '', $path);
 
 // Roteamos, ele "puxa" a page requisitada pelo usuario
-match ($path) {
-    '/', '/inicio' => require '../resources/view/pageHome.php',
-    '/magias' => require '../resources/view/magias.php',
-    default => require '../resources/view/404.php',
+$viewPath = match ($path) {
+    '/', '/inicio' => 'pageHome.php',
+    '/magias' => 'pageSpells.php',
+    default => '404.php',
 };
+
+// Aqui, a página é montada na ordem correta
+require '../resources/view/layout/header.php';
+require '../resources/view/' . $viewPath;

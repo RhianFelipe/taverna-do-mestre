@@ -1,7 +1,22 @@
+# Se o módulo mod_rewrite do Apache estiver habilitado...
 <IfModule mod_rewrite.c>
+    # ... ligue o motor de reescrita de URL.
     RewriteEngine On
+
+    # A pasta base para todas as regras. 
+    # Isso é crucial para que o roteamento funcione corretamente no seu projeto.
     RewriteBase /mestre/public/
+
+    # Condição: Se a requisição NÃO for para um diretório real que exista.
     RewriteCond %{REQUEST_FILENAME} !-d
+
+    # Condição: E se a requisição NÃO for para um arquivo real que exista.
     RewriteCond %{REQUEST_FILENAME} !-f
+
+    # A Regra Principal:
+    # Se as duas condições acima forem verdadeiras,
+    # direcione TUDO para o arquivo index.php.
+    # [QSA] mantém qualquer parâmetro de consulta (ex: ?id=123).
+    # [L] faz com que esta seja a última regra a ser processada.
     RewriteRule ^(.*)$ index.php [QSA,L]
 </IfModule>
