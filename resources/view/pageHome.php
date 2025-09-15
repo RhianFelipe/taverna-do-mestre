@@ -38,7 +38,7 @@
                         <li><a href="/mestre/public/magias" class="text-decoration-none text-dark">✨ Todas as Magias</a></li>
                         <li><a href="#" class="text-decoration-none text-dark">📖 Classes e Raças</a></li>
                         <li><a href="#" class="text-decoration-none text-dark">⚔️ Itens e Armas</a></li>
-                        <li><a href="#" class="text-decoration-none text-dark">🤕 Condições de Combate</a></li>
+                        <li><a href="https://tocadocoruja.com/wiki-toca/dnd-mecanicas-basicas/condicoes-em-dd-5e" class="text-decoration-none text-dark">🤕 Condições de Combate</a></li>
                     </ul>
                 </div>
             </div>
